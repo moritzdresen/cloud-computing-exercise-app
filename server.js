@@ -49,7 +49,7 @@ app.get('/api', (req, res) => {
 // TODO:  Fill the values
 app.get('/api/profile', (req, res) => {
   res.json({
-    'name': '',
+    'name': 'Peter',
     'homeCountry': '',
     'degreeProgram': '',//informatics or CSE.. etc
     'email': '',
