@@ -42,10 +42,12 @@ app.get('/api', (req, res) => {
       {method: 'GET', path: '/api', description: 'Describes all available endpoints'},
       {method: 'GET', path: '/api/profile', description: 'Data about me'},
       {method: 'GET', path: '/api/books/', description: 'Get All books information'},
+      {method: 'GET', path: '/api/books/:id', description: 'Get the book ID and new information of book'}
       // TODO: Write other API end-points description here like above
     ]
   })
 });
+
 // TODO:  Fill the values
 app.get('/api/profile', (req, res) => {
   res.json({
@@ -60,6 +62,7 @@ app.get('/api/profile', (req, res) => {
 
   })
 });
+
 /*
  * Get All books information
  */
@@ -75,6 +78,7 @@ app.get('/api/books/', (req, res) => {
     res.json(books);
   });
 });
+
 /*
  * Add a book information into database
  */
@@ -88,10 +92,11 @@ app.post('/api/books/', (req, res) => {
    * TODO: use the books model and create a new object
    * with the information in req.body
    */
+
   /*
    * return the new book information object as json
    */
-  var newBook = {};
+  var newBook = db.books.create(req.body);
   res.json(newBook);
 });
 
@@ -109,12 +114,14 @@ app.put('/api/books/:id', (req, res) => {
   /*
    * TODO: use the books model and find using the bookId and update the book information
    */
+
   /*
    * Send the updated book information as a JSON object
    */
   var updatedBookInfo = {};
   res.json(updatedBookInfo);
 });
+
 /*
  * Delete a book based upon the specified ID
  */
@@ -127,6 +134,7 @@ app.delete('/api/books/:id', (req, res) => {
    * TODO: use the books model and find using
    * the bookId and delete the book
    */
+
   /*
    * Send the deleted book information as a JSON object
    */
