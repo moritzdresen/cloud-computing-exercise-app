@@ -50,7 +50,7 @@ app.get('/api', (req, res) => {
 app.get('/api/profile', (req, res) => {
   res.json({
     'name': 'Peter',
-    'homeCountry': '',
+    'homeCountry': 'Legoland',
     'degreeProgram': '',//informatics or CSE.. etc
     'email': '',
     'deployedURLLink': '',//leave this blank for the first exercise
