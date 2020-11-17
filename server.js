@@ -51,12 +51,12 @@ app.get('/api/profile', (req, res) => {
   res.json({
     'name': 'Peter',
     'homeCountry': 'Legoland',
-    'degreeProgram': '',//informatics or CSE.. etc
-    'email': '',
+    'degreeProgram': 'Information systems',//informatics or CSE.. etc
+    'email': 'Peter.parker@gmail.com',
     'deployedURLLink': '',//leave this blank for the first exercise
     'apiDocumentationURL': '', //leave this also blank for the first exercise
-    'currentCity': '',
-    'hobbies': []
+    'currentCity': 'New York City',
+    'hobbies': ['martial arts','working out']
 
   })
 });
